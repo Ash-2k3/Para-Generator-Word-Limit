@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import words from '../utils/words';
 import arrayWords from "../utils/words"
+
+
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,11 @@ export class AppComponent {
   word:string = '' ;
   limit = 10 ;
   
-  handleSlideChange(newLimit:number){
-    this.limit = newLimit
-  }
+   handleSlideChange(event:any){
+    this.limit = event.target.value
+    }
 
   generate(){
-    this.word = words.slice(0,this.limit).join(' ');
+    this.word = arrayWords.slice(0,this.limit).join(' ');
   }
 }
