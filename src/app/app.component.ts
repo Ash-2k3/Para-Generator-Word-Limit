@@ -11,7 +11,7 @@ import arrayWords from "../utils/words"
 export class AppComponent {
   title = 'word-generator';
 
-  word:string = '' ;
+  words:string = '' ;
   limit = 10 ;
   
    handleSlideChange(event:any){
@@ -19,6 +19,6 @@ export class AppComponent {
     }
 
   generate(){
-    this.word = arrayWords.slice(0,this.limit).join(' ');
+    this.words = arrayWords.slice(0,this.limit).join(' ');
   }
 }
